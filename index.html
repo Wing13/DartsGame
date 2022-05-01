@@ -9,7 +9,7 @@
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
+    <script type="module">
       import bridge from '@vkontakte/vk-bridge';
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
