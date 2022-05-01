@@ -12,8 +12,8 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
-      alert( "Привет" );
-      function showAd(){bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
+      function showAd(){alert( "Кек" );
+                         bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
                          bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
                                                               .then(data => console.log(data.result))
                                                               .catch(error => console.log(error));
