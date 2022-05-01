@@ -29,17 +29,5 @@
 <script src="Release/UnityLoader.js"></script>
 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
-<script>
-function AdInit () {vkBridge.send('VKWebAppInit');}
-
-function showAd(){bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
-
-                  bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
-                  .then(data => console.log(data.result))
-                  .catch(error => console.log(error));
-                 }
-
-</script>
-
   </body>
 </html>
