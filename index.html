@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
+      import bridge from '@vkontakte/vk-bridge';
       vkBridge.send('VKWebAppInit');
       
                          bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
@@ -18,7 +19,7 @@
                                                               .then(data => console.log(data.result))
                                                               .catch(error => console.log(error));
                        
-      alert( "Kek" );
+    
     </script>
 
   </head>
