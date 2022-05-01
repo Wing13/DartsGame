@@ -12,6 +12,8 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
+      function AdInit () {vkBridge.send('VKWebAppInit');}
+      
     </script>
 
   </head>
