@@ -13,8 +13,7 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
       function AdInit () {vkBridge.send('VKWebAppInit');}
-      function showAd(){
-                       }
+      function showAd(){bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});}
     </script>
 
   </head>
