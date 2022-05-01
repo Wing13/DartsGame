@@ -10,8 +10,8 @@
     <script src="Build/UnityLoader.js"></script>
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       import bridge from '@vkontakte/vk-bridge';
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
       
                          bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
