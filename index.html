@@ -13,14 +13,10 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
       vkBridge.send('VKWebAppInit');
       
-      function showAd () {
-                         vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
-                         vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
-                                                                .then(data => console.log(data.result))
-                                                                .catch(error => console.log(error));
-      }
-                       
-    
+      window.showAd = function () {vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
+                                   vkBridge.send("VKWebAppShowNativeAds",  {ad_format:"interstitial"})
+                                                                           .then(data => console.log(data.result))
+                                                                           .catch(error => console.log(error));}              
     </script>
 
   </head>
