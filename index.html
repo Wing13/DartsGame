@@ -17,18 +17,29 @@
       <div class="title">Darts 3D 4 Free</div>
     </div>
     <script type='text/javascript'>
-  var Module = {
+    var Module = {
     TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#222C36",
-    splashStyle: "Light",
-    dataUrl: "Release/Darts.data",
-    codeUrl: "Release/Darts.js",
-    asmUrl: "Release/Darts.asm.js",
-    memUrl: "Release/Darts.mem",
+    errorhandler: null, compatibilitycheck: null,
+    backgroundColor: "#222C36", splashStyle: "Light",
+    dataUrl: "Release/Darts.data", codeUrl: "Release/Darts.js",
+    asmUrl: "Release/Darts.asm.js", memUrl: "Release/Darts.mem",
   };
 </script>
+
+<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+<script>
+function AdInit () {vkBridge.send('VKWebAppInit');}
+
+function showAd(){bridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"});
+
+                  bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
+                  .then(data => console.log(data.result))
+                  .catch(error => console.log(error));
+                 }
+
+</script>
+
 <script src="Release/UnityLoader.js"></script>
 
   </body>
