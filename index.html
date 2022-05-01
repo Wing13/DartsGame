@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darts.json", {onProgress: UnityProgress});
+      vkBridge.send('VKWebAppInit');
     </script>
 
   </head>
